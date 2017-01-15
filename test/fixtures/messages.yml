@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from: 
+  subject: 
+  body: 
+  copied: false
+
+two:
+  from: 
+  subject: 
+  body: 
+  copied: false
