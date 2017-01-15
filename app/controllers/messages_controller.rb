@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
 
 	def index
 		@message = Message.new
-		@messages = Message.find_by_private(false)
+		@messages = Message.all
 	end
 
 	def create
@@ -16,4 +16,10 @@ class MessagesController < ApplicationController
 	def show
 
 	end
+
+	private
+
+	def message_params
+      params.require(:message).permit(:from, :subject, :body)
+    end
 end
