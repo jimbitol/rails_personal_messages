@@ -1,5 +1,9 @@
 <h1> My Messages </h1>
 
-<div id="messages">
-	<% render @messages %>
-</div>
+<% if @messages %>
+	<p>I have no public messages at the moment</p>
+<% else %>
+	<div id="messages">
+		<% render @messages %>
+	</div>
+<% end %>
