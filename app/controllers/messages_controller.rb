@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
 	before_action :fetch_message, only: [:show, :destroy]
 
 	def index
-		Message.delete_all
 		@messages = Message.all
 	end
 

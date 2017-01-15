@@ -5,9 +5,9 @@ class MessagesMailer < ApplicationMailer
 
     @message = message
 
-    attachments['resume.pdf'] = File.read("#{Rails.root}/public/MCABRERA_RESUME.pdf") if @message.copied
-    cc = @message.from if @message.copied
+    attachments['resume.pdf'] = File.read("#{Rails.root}/public/MCABRERA_RESUME.pdf") if @message.copied == 1
+    @bcc = @message.from if @message.copied == "1"
 
-    mail to: "maxcabrera815@gmail.com", subject: @message.subject, cc: cc
+    mail to: "maxcabrera815@gmail.com", subject: @message.subject, bcc: @bcc
   end
 end
