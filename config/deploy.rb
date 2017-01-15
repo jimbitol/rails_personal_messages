@@ -35,3 +35,5 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "vendor/bund
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
+
+set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh/MyKeyPair.pem) }
