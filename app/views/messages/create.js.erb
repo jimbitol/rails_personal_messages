@@ -1,0 +1,2 @@
+$('div#messages').append("<%= escape_javascript(render @message) %>");
+$('div#<%= dom_id(@message) %>').effect('highlight');
