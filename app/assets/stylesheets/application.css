@@ -15,15 +15,17 @@
  */
 
 /* The navigation bar */
-.ul {
+body {margin:0;}
+
+ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333333;
-    position: fixed; /* Set the navbar to fixed position */
-    top: 0; /* Position the navbar at the top of the page */
-    width: 100%; /* Full width */
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 li {
@@ -37,7 +39,7 @@ li a {
     text-decoration: none;
 }
 
-/* Main content */
 .main {
-    margin-top: 30px; /* Add a top margin to avoid content overlay */
+    padding: 16px;
+    margin-top: 30px;
 }
