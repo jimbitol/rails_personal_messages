@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsPersonalSite</title>
+    <title>CMAX Messages</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,18 @@
   </head>
 
   <body>
+
+  	<ul>
+	  <li><a href="#home">Home</a></li>
+	  <li><a href="#news">News</a></li>
+	  <li><a href="#contact">Contact</a></li>
+	</ul>
+
+	<div class="main">
+	  <p>Some text some text some text some text..</p>
+	</div>
+
     <%= yield %>
+
   </body>
 </html>
