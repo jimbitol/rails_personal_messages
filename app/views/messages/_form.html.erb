@@ -1,26 +1,26 @@
 <%= form_for(Message.new, remote: true) do |f| %>
 
-  <div id="from">
+  <div class="field" id="from">
     <%= f.label :from %>
     <%= f.text_field :from %>
   </div>
 
-  <div id="subject">
+  <div class="field" id="subject">
     <%= f.label :subject %>
     <%= f.text_field :subject %>
   </div>
 
-  <div id="body">
+  <div class="field" id="body">
     <%= f.label :body %>
     <%= f.text_area :body %>
   </div>
 
-  <div id="copied">
-    <%= f.label :copied %>
+  <div class="field" id="copied">
+    <%= f.label "Send me a copy" %>
     <%= f.check_box :copied %>
   </div>
 
-  <div class="actions">
+  <div class="field" class="actions">
     <%= f.submit %>
   </div>
 <% end %>

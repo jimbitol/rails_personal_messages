@@ -1,6 +1,5 @@
 <%= div_for message do %>
-	<%= link_to message.subject, message %>
-	<div class="actions">
-		<%= link_to "Make private", message, method: :delete, remote: true %>
-	</div>
+	<p><strong>Message <%= message.id %></strong></p>
+	<p><strong>Subject:</strong> <%= message.subject %></p>
+	<p><strong>Body:</strong> <%= message.body %></p>
 <% end %>

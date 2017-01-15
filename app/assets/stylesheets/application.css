@@ -14,8 +14,6 @@
  *= require_self
  */
 
-/* The navigation bar */
-
 html {
   height: 100%;
 }
@@ -52,10 +50,35 @@ li a {
     margin-top: 30px;
 }
 
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+a {
+  color: #222222;
+
+  &:visited {
+    color: #777777;
+  }
+
+  &:hover {
+    color: #ffffff;
+    background-color: #111111;
+  }
+}
+
 #wrapper {
     min-height: 100%;
     height: auto !important;
     height: 100%;
+}
+
+.message {
+    border: 1px solid green;
+    margin: 5px;
+    padding: 2px;
 }
 
 footer {
@@ -70,4 +93,8 @@ footer {
 	right: 0;
 	left: 0;
 	padding: 0;
+}
+
+label {
+  display: block;
 }

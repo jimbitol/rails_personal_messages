@@ -1,27 +1,24 @@
 class MessagesController < ApplicationController
 
-	before_action :fetch_message, only: [:show, :destroy]
+	before_action :fetch_message, only: [:show, :update]
 
 	def index
+		Message.destroy_all # initialize only for demo purpose
 		@messages = Message.all
 	end
 
 	def create
 		@message = Message.create(message_params)
-
-	    respond_to do |format|
-	      format.js
-	    end
 	end
 
 	def show
 
 	end
 
-	def destroy
-	    @message.update(private: true)
-	    false
-	  end
+	def update
+	    @message.private = true
+	    @message.save
+	 end
 
 	private
 
@@ -30,6 +27,6 @@ class MessagesController < ApplicationController
 	end
 
 	def message_params
-      params.require(:message).permit(:from, :subject, :body)
+      params.require(:message).permit(:from, :subject, :body, :copied)
     end
 end

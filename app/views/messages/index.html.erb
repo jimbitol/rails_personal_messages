@@ -1,12 +1,11 @@
 <h1> My Messages </h1>
 
 <% if @messages.count == 0 %>
-	<p>I have no public messages at the moment</p>
-<% else %>
-	<div id="messages">
-		<%= render @messages %>
-	</div>
+	<p id="nomsgp">I have no public messages at the moment</p>
 <% end %>
+<div id="messages">
+	<%= render @messages %>
+</div>
 
 <h3>Send me a message!</h3>
 
