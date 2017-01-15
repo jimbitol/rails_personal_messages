@@ -1,0 +1,26 @@
+<%= form_for(message) do |f| %>
+
+  <div id="from">
+    <%= f.label :from %>
+    <%= f.text_field :from %>
+  </div>
+
+  <div id="subject">
+    <%= f.label :subject %>
+    <%= f.text_field :subject %>
+  </div>
+
+  <div id="body">
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+  </div>
+
+  <div id="copied">
+    <%= f.label :copied %>
+    <%= f.check_box :copied %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
